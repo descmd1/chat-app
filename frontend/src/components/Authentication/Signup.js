@@ -7,7 +7,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 const Signup = () => {
   const [show, setShow] = useState(false);
@@ -76,7 +76,7 @@ const Signup = () => {
     } catch (error) {
       toast({
         title: "Error Occured!",
-        description: error.response.data.message,
+        description: error?.response?.data?.message,
         status: "error",
         duration: 5000,
         isClosable: true,

@@ -12,11 +12,11 @@ import ScrollableChat from "./ScrollableChat";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
-
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
+
+const API_BASE_URL = process.env.REACT_APP_API_URL ;
 const ENDPOINT =  "https://chat-app-09fi.onrender.com"; // "http://localhost:5000" 
 var socket, selectedChatCompare;
 
